@@ -1,6 +1,8 @@
 # Stagecoach DP GUI (Streamlit + Tailwind)
 
-Made by [Visqy](https://github.com/Visqy) and [AkmalMakarim](https://github.com/AkmalMakarim).Aplikasi GUI sederhana untuk memecahkan **Stagecoach Dynamic Programming** (layered shortest/longest path) dan memvisualisasikan **semua jalur optimal**. Antarmuka dibuat dengan **Streamlit** dan styling **Tailwind CSS via CDN**. Solver, rekonstruksi jalur, dan visualisasi graf disediakan oleh modul lokal `stagecoach.py`.
+Made by [Visqy](https://github.com/Visqy) and [AkmalMakarim](https://github.com/AkmalMakarim).
+
+Aplikasi GUI sederhana untuk memecahkan **Stagecoach Dynamic Programming** (layered shortest/longest path) dan memvisualisasikan **semua jalur optimal**. Antarmuka dibuat dengan **Streamlit** dan styling **Tailwind CSS via CDN**. Solver, rekonstruksi jalur, dan visualisasi graf disediakan oleh modul lokal `stagecoach.py`.
 
 ## Fitur
 
@@ -72,7 +74,12 @@ Setelah berjalan, Streamlit akan membuka aplikasi di browser pada alamat `http:/
 `layers` adalah list of list berurutan dari kiri ke kanan (stage 0, 1, ..., K).
 
 ```json
-[["S"], ["A", "B"], ["C", "D"], ["T"]]
+[
+  ["S"],
+  ["A", "B"],
+  ["C", "D"],
+  ["T"]
+]
 ```
 
 - **Start** harus berada di **stage 0**.
@@ -86,11 +93,11 @@ Setelah berjalan, Streamlit akan membuka aplikasi di browser pada alamat `http:/
 
 ```json
 {
-  "S": { "A": 2, "B": 5 },
-  "A": { "C": 4, "D": 1 },
-  "B": { "C": 2 },
-  "C": { "T": 3 },
-  "D": { "T": 2 }
+  "S": {"A": 2, "B": 5},
+  "A": {"C": 4, "D": 1},
+  "B": {"C": 2},
+  "C": {"T": 3},
+  "D": {"T": 2}
 }
 ```
 
@@ -100,11 +107,11 @@ Setelah berjalan, Streamlit akan membuka aplikasi di browser pada alamat `http:/
 {
   "layers": [["S"], ["A", "B"], ["C", "D"], ["T"]],
   "edges": {
-    "S": { "A": 2, "B": 5 },
-    "A": { "C": 4, "D": 1 },
-    "B": { "C": 2 },
-    "C": { "T": 3 },
-    "D": { "T": 2 }
+    "S": {"A": 2, "B": 5},
+    "A": {"C": 4, "D": 1},
+    "B": {"C": 2},
+    "C": {"T": 3},
+    "D": {"T": 2}
   },
   "start": "S",
   "goal": "T",
